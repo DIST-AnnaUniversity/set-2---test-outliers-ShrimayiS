@@ -11,4 +11,4 @@ median1 = df['Pregnancies'].median()
 
 #print the value and round off to 2 decimal places
 
-print(round(median1, 2))
+print(round(median1, 3))
