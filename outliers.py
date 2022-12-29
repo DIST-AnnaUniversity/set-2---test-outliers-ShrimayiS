@@ -77,10 +77,10 @@ df_dict={"Pregnancies": len(df_filteredp),
 "Age": len(df_filteredage),}
 Key_max = max(df_dict, key = lambda x: df_dict[x])  
 max_val = max([max(df_dict.values()) for dict in df_dict])
-print( Key_max, " " , max_val)  
+
 
 #print the name of the column and the number of values of the column that has maximum outliers. For example, if the first column has maximum outliers with 25, the value should be printed as 'Pregnancies 25' (without inverted comma)
-
+print( Key_max, " " , max_val)  
 
 
 
