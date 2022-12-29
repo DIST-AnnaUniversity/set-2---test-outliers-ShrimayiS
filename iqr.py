@@ -8,6 +8,7 @@ df = pd.read_csv('C:\\set-2---test-outliers-ShrimayiS-main\\dia.csv')
 
 
 #find the first quantile and third quantile
+df.sort_values("Pregnancies")
 Q3 = np.quantile(df['Pregnancies'], 0.75)
 Q1 = np.quantile(df['Pregnancies'], 0.25)
 print(Q1)
