@@ -8,22 +8,31 @@ import numpy as np
 df = pd.read_csv('C:\\set-2---test-outliers-ShrimayiS-main\\dia.csv')
 
 #find the outliers with iqr for each column
+df.sort_values("Pregnancies")
 qp3=np.quantile(df['Pregnancies'], 0.75)
 qp1=np.quantile(df['Pregnancies'], 0.25)
+df.sort_values("Glucose")
 qg3=np.quantile(df['Glucose'], 0.75)
 qg1=np.quantile(df['Glucose'], 0.25)
+df.sort_values("BloodPressure")
 qbp3=np.quantile(df['BloodPressure'], 0.75)
 qbp1=np.quantile(df['BloodPressure'], 0.25)
+df.sort_values("SkinThickness")
 qst3=np.quantile(df['SkinThickness'], 0.75)
 qst1=np.quantile(df['SkinThickness'], 0.25)
+df.sort_values("Insulin")
 qi3=np.quantile(df['Insulin'], 0.75)
 qi1=np.quantile(df['Insulin'], 0.25)
+df.sort_values("BMI")
 qbmi3=np.quantile(df['BMI'], 0.75)
-qbmi1=np.quantile(df['Insulin'], 0.25)
+qbmi1=np.quantile(df['BMI'], 0.25)
+df.sort_values("DiabetesPedigreeFunction")
 qdpf3=np.quantile(df['DiabetesPedigreeFunction'], 0.75)
 qdpf1=np.quantile(df['DiabetesPedigreeFunction'], 0.25)
+df.sort_values("Age")
 qage3=np.quantile(df['Age'], 0.75)
 qage1=np.quantile(df['Age'], 0.25)
+
 iqrp=((np.quantile(df['Pregnancies'], 0.75))-(np.quantile(df['Pregnancies'], 0.25)))
 iqrg=((np.quantile(df['Glucose'], 0.75))-(np.quantile(df['Glucose'], 0.25)))
 iqrbp=((np.quantile(df['BloodPressure'], 0.75))-(np.quantile(df['BloodPressure'], 0.25)))
@@ -68,9 +77,10 @@ df_dict={"Pregnancies": len(df_filteredp),
 "Age": len(df_filteredage),}
 Key_max = max(df_dict, key = lambda x: df_dict[x])  
 max_val = max([max(df_dict.values()) for dict in df_dict])
+print( Key_max, " " , max_val)  
 
 #print the name of the column and the number of values of the column that has maximum outliers. For example, if the first column has maximum outliers with 25, the value should be printed as 'Pregnancies 25' (without inverted comma)
-print( Key_max, " " , max_val)  
+
 
 
 
