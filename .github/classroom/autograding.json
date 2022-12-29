@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "median",
+      "setup": "sudo -H pip3 install pandas",
+      "run": "python3 median.py",
+      "input": "",
+      "output": "3.0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "iqr",
+      "setup": "sudo -H pip3 install pandas",
+      "run": "python3 iqr.py",
+      "input": "",
+      "output": "5.0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 7
+    },
+    {
+      "name": "outliers",
+      "setup": "sudo -H pip3 install pandas",
+      "run": "python3 outliers.py",
+      "input": "",
+      "output": "BloodPressure 45",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 13
+    }
+  ]
+}
