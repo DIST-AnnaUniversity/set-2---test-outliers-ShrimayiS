@@ -18,4 +18,4 @@ print(Q3)
 IQR = Q3 - Q1
 print(IQR)
 #round off iqr to two decimal places
-print(round(IQR, 3))
+print(round(IQR, 2))
