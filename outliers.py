@@ -5,7 +5,7 @@ import numpy as np
 
 
 #read the csv file
-df = pd.read_csv('C:\\set-2---test-outliers-ShrimayiS-main\\dia.csv')
+df = pd.read_csv('dia.csv')
 
 #find the outliers with iqr for each column
 df.sort_values("Pregnancies")
