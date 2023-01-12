@@ -4,7 +4,7 @@ import numpy as np
 
 
 #read the csv file
-df = pd.read_csv('C:\\set-2---test-outliers-ShrimayiS-main\\dia.csv')
+df = pd.read_csv('dia.csv')
 
 
 #find the first quantile and third quantile
